@@ -1,0 +1,18 @@
+{
+  "id": "pdf-ocr",
+  "name": "pdf-ocr",
+  "displayName": "PDF & Image OCR",
+  "description": "OCR text extraction from scanned PDFs and images. Tesseract with 100+ languages, word-level bounding boxes, image preprocessing, and document scan enhancement. Powered by PDFAPIHub.",
+  "version": "1.0.0",
+  "author": "PdfApiHub",
+  "homepage": "https://pdfapihub.com",
+  "extensions": ["./index.ts"],
+  "skills": ["./skills"],
+  "compat": { "pluginApi": ">=2026.3.24-beta.2", "minGatewayVersion": "2026.3.24-beta.2" },
+  "configSchema": {
+    "type": "object",
+    "properties": {
+      "apiKey": { "type": "string", "description": "PDFAPIHub API key. Get a free key at https://pdfapihub.com" }
+    }
+  }
+}

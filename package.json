@@ -1,0 +1,18 @@
+{
+  "name": "pdf-ocr",
+  "version": "1.0.0",
+  "description": "OCR text extraction from scanned PDFs and images. Tesseract OCR with 100+ languages, configurable DPI, word-level bounding boxes, character whitelisting, image preprocessing, and document scanning with perspective correction. Powered by PDFAPIHub.",
+  "type": "module",
+  "main": "index.ts",
+  "keywords": ["openclaw", "pdf-ocr", "ocr", "tesseract", "text-extraction", "scanned-pdf", "image-ocr", "document-scanning", "receipt-scanner", "pdfapihub", "clawhub", "ai-agent"],
+  "author": "PDFAPIHub <hello@pdfapihub.com>",
+  "license": "MIT",
+  "homepage": "https://pdfapihub.com",
+  "repository": { "type": "git", "url": "https://github.com/PdfApiHub/openclaw-pdf-ocr" },
+  "openclaw": {
+    "extensions": ["./index.ts"],
+    "skills": ["./skills"],
+    "compat": { "pluginApi": ">=2026.3.24-beta.2", "minGatewayVersion": "2026.3.24-beta.2" },
+    "build": { "openclawVersion": "2026.3.24-beta.2", "pluginSdkVersion": "2026.3.24-beta.2" }
+  }
+}
