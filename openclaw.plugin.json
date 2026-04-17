@@ -1,6 +1,6 @@
 {
-  "id": "pdf-ocr",
-  "name": "pdf-ocr",
+  "id": "pdf-ocr-scan",
+  "name": "pdf-ocr-scan",
   "displayName": "PDF & Image OCR",
   "description": "OCR text extraction from scanned PDFs and images. Tesseract with 100+ languages, word-level bounding boxes, image preprocessing, and document scan enhancement. Powered by PDFAPIHub.",
   "version": "1.0.0",
