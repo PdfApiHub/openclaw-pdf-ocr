@@ -37,6 +37,8 @@ Configure in `~/.openclaw/openclaw.json`:
 }
 ```
 
+**Privacy note:** Files you process are uploaded to PDFAPIHub's cloud service. Files are auto-deleted after 30 days.
+
 ## Usage Examples
 
 **OCR a scanned PDF:**

@@ -6,13 +6,36 @@
   "version": "1.0.0",
   "author": "PdfApiHub",
   "homepage": "https://pdfapihub.com",
-  "extensions": ["./index.ts"],
-  "skills": ["./skills"],
-  "compat": { "pluginApi": ">=2026.3.24-beta.2", "minGatewayVersion": "2026.3.24-beta.2" },
+  "extensions": [
+    "./index.ts"
+  ],
+  "skills": [
+    "./skills"
+  ],
+  "compat": {
+    "pluginApi": ">=2026.3.24-beta.2",
+    "minGatewayVersion": "2026.3.24-beta.2"
+  },
   "configSchema": {
     "type": "object",
     "properties": {
-      "apiKey": { "type": "string", "description": "PDFAPIHub API key. Get a free key at https://pdfapihub.com" }
+      "apiKey": {
+        "type": "string",
+        "description": "PDFAPIHub API key (required). Get a free key at https://pdfapihub.com. Files are sent to PDFAPIHub servers for processing."
+      }
+    },
+    "required": [
+      "apiKey"
+    ]
+  },
+  "metadata": {
+    "openclaw": {
+      "primaryEnv": "PDFAPIHUB_API_KEY",
+      "requires": {
+        "env": [
+          "PDFAPIHUB_API_KEY"
+        ]
+      }
     }
   }
 }
