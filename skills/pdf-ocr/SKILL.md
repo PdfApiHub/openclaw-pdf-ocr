@@ -20,13 +20,30 @@ Extract text from scanned PDFs and images, enhance document photos, and compare 
 
 Get your **free API key** at [https://pdfapihub.com](https://pdfapihub.com).
 
-Configure in `~/.openclaw/openclaw.json`:
+**Privacy note:** PDFs and images you process are uploaded to PDFAPIHub's cloud service for OCR. Your API key grants the service access to process any files you send. Files are auto-deleted after 30 days.
+
+Configure your API key in `~/.openclaw/openclaw.json`:
 
 ```json
 {
   "plugins": {
     "entries": {
-      "pdf-ocr": {
+      "pdf-ocr-scan": {
+        "enabled": true,
+        "apiKey": "your-api-key-here"
+      }
+    }
+  }
+}
+```
+
+Or use the `env` approach (OpenClaw injects it into `config.apiKey` automatically):
+
+```json
+{
+  "plugins": {
+    "entries": {
+      "pdf-ocr-scan": {
         "enabled": true,
         "env": {
           "PDFAPIHUB_API_KEY": "your-api-key-here"
@@ -36,8 +53,6 @@ Configure in `~/.openclaw/openclaw.json`:
   }
 }
 ```
-
-**Privacy note:** Files you process are uploaded to PDFAPIHub's cloud service. Files are auto-deleted after 30 days.
 
 ## Usage Examples
 

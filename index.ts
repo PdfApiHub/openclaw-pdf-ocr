@@ -43,7 +43,7 @@ function getApiKey(config: Record<string, unknown>): string {
   const key = (config.apiKey as string) || "";
   if (!key) {
     throw new Error(
-      "PDFAPIHub API key not configured. Add your key in plugin config (plugins.entries.pdf-ocr.env.PDFAPIHUB_API_KEY) or set apiKey in plugin config. Get a free key at https://pdfapihub.com"
+      "PDFAPIHub API key not configured. Set it under plugins.entries.pdf-ocr-scan in your openclaw.json: either as apiKey (string) or via env.PDFAPIHUB_API_KEY. Get a free key at https://pdfapihub.com"
     );
   }
   return key;
@@ -60,7 +60,7 @@ function buildBody(params: Record<string, unknown>): Record<string, unknown> {
 }
 
 const plugin: PluginEntry = {
-  id: "pdf-ocr",
+  id: "pdf-ocr-scan",
   name: "PDF & Image OCR",
   register(api) {
     // ─── OCR PDF ─────────────────────────────────────────────
